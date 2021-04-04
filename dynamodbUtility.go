@@ -126,10 +126,10 @@ func batchDump(sess *session.Session, data []TimeLineData) {
 		writeRequests = append(writeRequests, &dynamodb.WriteRequest{PutRequest: &dynamodb.PutRequest{
 			Item: map[string]*dynamodb.AttributeValue{
 				"Month": {
-					S: aws.String(d.date),
+					S: aws.String(d.Date),
 				},
 				"Cupcake": {
-					N: aws.String(strconv.Itoa(d.count)),
+					N: aws.String(strconv.Itoa(d.Count)),
 				},
 				"last_update": {
 					S: aws.String(time.Now().UTC().Format(time.RFC3339)),

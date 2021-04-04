@@ -10,8 +10,8 @@ import (
 )
 
 type TimeLineData struct {
-	date  string
-	count int
+	Date  string `json:"date"`
+	Count int    `json:"count"`
 }
 
 func readCsv(fname string) []TimeLineData {

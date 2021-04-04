@@ -3,3 +3,80 @@ AKIATNLFYBIN5NZE2OXK
 
 Secret access key:
 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
+
+
+"UserId": "AIDATNLFYBINV7YO3VP6G",
+"Account": "234825976347",
+"Arn": "arn:aws:iam::234825976347:user/892905"
+
+
+Role creation:
+{
+    "Role": {
+        "Path": "/service-role/",
+        "RoleName": "892905-lambda-role",
+        "RoleId": "AROATNLFYBINV644CDD7N",
+        "Arn": "arn:aws:iam::234825976347:role/service-role/892905-lambda-role",
+        "CreateDate": "2021-04-03T06:32:41+00:00",
+        "AssumeRolePolicyDocument": {
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Effect": "Allow",
+                    "Principal": {
+                        "Service": "lambda.amazonaws.com"
+                    },
+                    "Action": "sts:AssumeRole"
+                }
+            ]
+        }
+    }
+}
+
+Function creation: 
+lambda-role
+{
+    "FunctionName": "publishCupcakeUpdates",
+    "FunctionArn": "arn:aws:lambda:ap-south-1:234825976347:function:publishCupcakeUpdates",
+    "Runtime": "go1.x",
+    "Role": "arn:aws:iam::234825976347:role/service-role/892905-lambda-role",
+    "Handler": "main",
+    "CodeSize": 4338114,
+    "Description": "",
+    "Timeout": 3,
+    "MemorySize": 128,
+    "LastModified": "2021-04-03T08:32:25.771+0000",
+    "Version": "$LATEST",
+    "TracingConfig": {
+        "Mode": "PassThrough"
+    },
+    "RevisionId": "eda7038d-1429-415e-8d95-49c773031481",
+    "State": "Active",
+    "LastUpdateStatus": "Successful",
+    "PackageType": "Zip"
+}
+
+Trigger creation
+{
+  BatchSize: 5,
+  BisectBatchOnFunctionError: false,
+  DestinationConfig: {
+    OnFailure: {
+
+    }
+  },
+  EventSourceArn: "arn:aws:dynamodb:ap-south-1:234825976347:table/Cupcake_Data/stream/2021-04-02T09:55:17.156",
+  FunctionArn: "arn:aws:lambda:ap-south-1:234825976347:function:publishCupcakeUpdates",
+  FunctionResponseTypes: [],
+  LastModified: 2021-04-03 10:39:14.636 +0000 UTC,
+  LastProcessingResult: "No records processed",
+  MaximumBatchingWindowInSeconds: 0,
+  MaximumRecordAgeInSeconds: -1,
+  MaximumRetryAttempts: -1,
+  ParallelizationFactor: 1,
+  StartingPosition: "TRIM_HORIZON",
+  State: "Creating",
+  StateTransitionReason: "User action",
+  TumblingWindowInSeconds: 0,
+  UUID: "13a36062-0709-41b2-b56d-c4630224d8a0"
+}
