@@ -36,6 +36,9 @@
         },
         {
             "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::234825976347:user/892905"
+            },
             "Action": [
                 "es:*"
             ],
