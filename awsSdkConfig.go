@@ -13,7 +13,7 @@ import (
 func configureAWS() *session.Session {
 	sess, err := session.NewSession(&aws.Config{
 		Region:      aws.String("ap-south-1"),
-		Credentials: credentials.NewStaticCredentials("AKIATNLFYBIN5NZE2OXK", "WclXT3YX5rqQksVNznG5At7IL+haRkak5vD3eMri", ""),
+		Credentials: credentials.NewStaticCredentials("XXXXXXXXXXXXXXXX", "XXXXXXXXXXXXXXXXXXXXXX", ""),
 	})
 
 	if err != nil {

@@ -1,15 +1,3 @@
-Access key ID: 
-AKIATNLFYBIN5NZE2OXK
-
-Secret access key:
-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
-
-
-"UserId": "AIDATNLFYBINV7YO3VP6G",
-"Account": "234825976347",
-"Arn": "arn:aws:iam::234825976347:user/892905"
-
-
 Role creation:
 {
     "Role": {
